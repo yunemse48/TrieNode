@@ -68,10 +68,31 @@ class Trie {
             }
         }
     }
+
+    contains(input, currentNode = this.root, index = 0) {
+        const word = Array.from(input);
+
+        if ( index === word.length ) {
+            if ( currentNode.isWord === true ) {
+                return true;
+            }
+            else return false
+        }
+
+        if ( word[index] in currentNode.children) {
+            currentNode = currentNode.children[word[index]];
+            return this.contains(input, currentNode, index + 1);
+        }
+        else return false;
+    }
 }
 
 const myTree = new Trie();
 myTree.insert("HELLO");
 myTree.insert("HELIPAD");
+console.log("HELLO in tree: " + myTree.contains("HELLO"));
+console.log("HELIPAD in tree: " + myTree.contains("HELIPAD"));
+console.log("HELL in tree: " + myTree.contains("HELL"));
+console.log("HELIPADD in tree: " + myTree.contains("HELIPADD"));
 //myTree.insert("HELKORT");
 //myTree.insert("HELICOPTER");
