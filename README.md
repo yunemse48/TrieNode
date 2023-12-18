@@ -9,9 +9,9 @@ This project implements a trie data structure, often used for efficient informat
 - Scalable and optimised for high-performance scenarios.
 
 ## Usage
-Modify the `Trie.js` file as requested, and run the script via `node ./Trie.js`. 
-
-This project served as a learning tool for me, but it's open ended and flexible. It can be improved for further purposes.
+- Modify the `Trie.js` file as requested, and run the script via `node ./Trie.js`. 
+- You'll see lots of `console.log()`s for better observing during runtime. You can remove them optionally.
+- This project served as a learning tool for me, but it's open ended and flexible. It can be improved for further purposes.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
