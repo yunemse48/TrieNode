@@ -42,6 +42,10 @@ class Trie {
         else {
 
             if ( array[index] in currentNode.children ) {
+                console.log("----------");
+                console.log("Index: " + index);
+                console.log("Passed Current Node: " + JSON.stringify(currentNode));
+
                 currentNode = currentNode.children[array[index]];
                 this.insert(input, currentNode, index + 1);
             }
