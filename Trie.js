@@ -1,6 +1,9 @@
-const TrieNode = require('./TrieNode');
-const fs = require('fs');
+import TrieNode from "./TrieNode.js";
+import fs from "fs";
+//const TrieNode = require('./TrieNode');
+//const fs = require('fs');
 //import * as fs from "fs";
+//delete require.cache[require.resolve('./TrieNode')];
 
 class Trie {
     constructor() {
@@ -72,6 +75,3 @@ myTree.insert("HELLO");
 myTree.insert("HELIPAD");
 //myTree.insert("HELKORT");
 //myTree.insert("HELICOPTER");
-
-
-module.exports = Trie;

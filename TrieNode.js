@@ -6,4 +6,4 @@ class TrieNode {
     }
 }
 
-module.exports = TrieNode;
+export default TrieNode;
