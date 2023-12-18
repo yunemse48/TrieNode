@@ -64,7 +64,6 @@ class Trie {
                 this.insert(input, currentNode, index + 1);
             }
         }
-        //this.root.children[array[0]] = reverseNodes[array[0]];
     }
 }
 
