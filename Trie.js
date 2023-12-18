@@ -1,9 +1,5 @@
 import TrieNode from "./TrieNode.js";
 import fs from "fs";
-//const TrieNode = require('./TrieNode');
-//const fs = require('fs');
-//import * as fs from "fs";
-//delete require.cache[require.resolve('./TrieNode')];
 
 class Trie {
     constructor() {
@@ -29,16 +25,18 @@ class Trie {
             const newNode = new TrieNode(array[index]);
             newNode.children = {};
             newNode.isWord = true;
+            
             currentNode.children[array[index]] = newNode;
             this.tree.push(currentNode);
+            
+            // walk to the next node
             currentNode = currentNode.children[array[index]];
 
-            //this.tree.push(currentNode);
             console.log("----------");
             console.log("Index: " + index);
             console.log("Current Node: " + JSON.stringify(currentNode));
-            //console.log("New Node: " + JSON.stringify(newNode));
             console.log("----------\n----------");
+            
             this.displayTree();
         }
         else {
@@ -57,13 +55,15 @@ class Trie {
                 
                 this.tree.push(currentNode);
                 const prevNode = currentNode;
+
+                // walk to the next node
                 currentNode = currentNode.children[array[index]];
 
                 console.log("----------");
                 console.log("Index: " + index);
                 console.log("Previous: " + JSON.stringify(prevNode));
                 console.log("Current Node: " + JSON.stringify(currentNode));
-                //console.log("New Node: " + JSON.stringify(newNode));
+
                 this.insert(input, currentNode, index + 1);
             }
         }
