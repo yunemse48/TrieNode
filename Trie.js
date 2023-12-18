@@ -20,7 +20,6 @@ class Trie {
 
     insert(input, currentNode = this.root, index = 0) {
 
-        if ( currentNode   ) {}
         // const array = Array.from(input);
         const array = Object.assign([], input);
         if ( index === array.length - 1) {
@@ -69,11 +68,11 @@ class Trie {
     }
 }
 
-const test = new Trie();
-test.insert("HELLO");
-test.insert("HELIPAD");
-//test.insert("HELKORT");
-//test.insert("HELICOPTER");
+const myTree = new Trie();
+myTree.insert("HELLO");
+myTree.insert("HELIPAD");
+//myTree.insert("HELKORT");
+//myTree.insert("HELICOPTER");
 
 
 module.exports = Trie;
